@@ -3,14 +3,15 @@
 Mysql database setup:
 
 table name:
-  user
+  - user
+
 table columns name: 
-  first_name
-  last_name
-  email
-  username
-  password
-  id
+  - first_name
+  - last_name
+  - email
+  - username
+  - password
+  - id
 
 id is set to AUTO_INCREMENT
 
