@@ -29,8 +29,8 @@ Naming Convention:
   - main-style.css
 
 File Structure:
-  root/css - holds the CSS
-  root/img - holds images or pictues for the site
-  root/script - holds the scripts such as javascript and php
-  root/include - holds the files to be included with a most, if not all, the other pages. For example the header, navbar, footer
+ - root/css - holds the CSS
+ - root/img - holds images or pictues for the site
+ - root/script - holds the scripts such as javascript and php
+ - root/include - holds the files to be included with a most, if not all, the other pages. For example the header, navbar, footer
   
