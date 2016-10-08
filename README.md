@@ -3,14 +3,15 @@
 Mysql database setup:
 
 table name:
-  user
+  - user
+
 table columns name: 
-  first_name
-  last_name
-  email
-  username
-  password
-  id
+  - first_name
+  - last_name
+  - email
+  - username
+  - password
+  - id
 
 id is set to AUTO_INCREMENT
 
@@ -28,8 +29,15 @@ Naming Convention:
   - main-style.css
 
 File Structure:
+<<<<<<< HEAD
   /css/ - holds the CSS
   /img/ - holds images or pictues for the site
   /script/ - holds the scripts such as javascript and php
   /include/ - holds the files to be included with a most, if not all, the other pages. For example the header, navbar, footer
+=======
+ - root/css - holds the CSS
+ - root/img - holds images or pictues for the site
+ - root/script - holds the scripts such as javascript and php
+ - root/include - holds the files to be included with most, if not all, the other pages. For example the header, navbar, footer
+>>>>>>> origin/master
   
