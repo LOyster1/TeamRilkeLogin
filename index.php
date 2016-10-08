@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 include 'script/user.php';
-include 'script/check-login2.php';
+include 'script/check-login.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +12,13 @@ include 'script/check-login2.php';
 		<?php include('include/header.php'); ?>
 		<?php include('include/nav-bar.php'); ?>
 		<div id="content">
+		
+		<!-- If the user successfully logins and is in session then the content below will be shown -->
 		<?php if(!empty($user)): ?>
 			<h6>Welcome <?= $user['first_name']; ?>  You are logged in!</h6>
 			<a href="script/logout.php">Logout</a>
+			
+		<!-- Else the login will be shown -->
 		<?php else: ?>
 			<div id="login">
 				<h1>Login</h1>

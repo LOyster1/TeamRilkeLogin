@@ -2,11 +2,11 @@
 require 'database.php';
 
 	// Makes sure the fields are filled
-	if(!empty($_POST['username']) && !empty($_POST['password'])):
+	if(!empty($_POST['username_email']) && !empty($_POST['password'])):
 		
 		// Retrives the record of the entered username from the user table
 		$records = $conn->prepare('SELECT * FROM user WHERE username = :username');
-		$records->bindParam(':username', $_POST['username']);
+		$records->bindParam(':username', $_POST['username_email']);
 		$records->execute();
 		$results = $records->fetch(PDO::FETCH_ASSOC);
 		
@@ -15,7 +15,7 @@ require 'database.php';
 		{
 			// Sets the session's 'user_id' to the user's 'id'
 			$_SESSION['user_id'] = $results['id'];
-			header("Location: /PermissionImpossible/test/");
+			header("Location: index.php");
 		} 
 		else
 		{

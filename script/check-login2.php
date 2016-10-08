@@ -16,7 +16,7 @@ require 'database.php';
 		{
 			// Sets the session's 'user_id' to the user's 'id'
 			$_SESSION['user_id'] = $results['id'];
-			header("Location: /PermissionImpossible/test/");
+			header("Location: index.php");
 		} 
 		else
 		{

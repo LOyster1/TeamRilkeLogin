@@ -1,8 +1,9 @@
 <?php 
 session_start();
+// If the user is already logged in and in session then the user will be redirected to the index.php
 if(isset($_SESSION['user_id']))
 {
-	header("Location: /PermissionImpossible/test/");
+	header("Location: index.php");
 }
 ?>
 

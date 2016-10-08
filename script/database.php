@@ -2,7 +2,7 @@
 // Server and database info
 $server = 'localhost';
 $username = 'root';
-$password = 'admin';
+$password = 'root';
 $database = 'permissionimpossible';
 
 // Attempting to connect to server and database

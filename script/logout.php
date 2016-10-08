@@ -2,5 +2,5 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: /PermissionImpossible/test/");
+header("Location: ../index.php");
 ?>

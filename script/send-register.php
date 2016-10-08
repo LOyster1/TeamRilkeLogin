@@ -48,7 +48,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['fi
 	if($error==false)
 	{
 		if( $stmt->execute() ):
-			header("Location: /PermissionImpossible/test/");
+			header("Location: ../index.php");
 			$message = 'Successfully created the new account';
 		else:
 			$message = 'Sorry there was an issue creating the new account';
