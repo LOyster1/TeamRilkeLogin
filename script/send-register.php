@@ -23,17 +23,27 @@ if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['fi
 	{
 		if($username_results['username'] == $_POST['username'])
 		{
-			echo "The username you entered is already taken<br />";
+			$username_msg = "Username Taken";
 			$error = true;
 		}
 	}
+	// Checking if the chosen username is already in the database as an email
+	$email_check = $conn->query('SELECT email FROM user');
+	while($email_results = $email_check->fetch(PDO::FETCH_ASSOC))
+	{
+		if($email_results['email'] == $_POST['username'])
+		{
+			$username_msg = "The username you entered is already registered";
+			$error = true;
+		}
+	}	
 	// Checking if the email is already in the database
 	$email_check = $conn->query('SELECT email FROM user');
 	while($email_results = $email_check->fetch(PDO::FETCH_ASSOC))
 	{
 		if($email_results['email'] == $_POST['email'])
 		{
-			echo "The email you entered is already registered<br />";
+			$email_msg = "The email you entered is already registered";
 			$error = true;
 		}
 	}
@@ -48,7 +58,7 @@ if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['fi
 	if($error==false)
 	{
 		if( $stmt->execute() ):
-			header("Location: ../index.php");
+			header("Location: index.php");
 			$message = 'Successfully created the new account';
 		else:
 			$message = 'Sorry there was an issue creating the new account';
@@ -56,13 +66,11 @@ if(!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['fi
 	}
 	else
 	{
-		echo "Could not complete your registration";
+		$message = 'Sorry there was an error while creating your account';
 	}
 	
 else:
-	//header("Location: /PermissionImpossible/test/register.php");
-	// Send Registration error message back to register.php page
+	$message = 'All fields must be filled';
 	
 endif;
-
 ?>

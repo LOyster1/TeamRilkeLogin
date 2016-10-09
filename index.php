@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 include 'script/user.php';
-include 'script/check-login.php';
+require 'script/check-login.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ include 'script/check-login.php';
 		
 		<!-- If the user successfully logins and is in session then the content below will be shown -->
 		<?php if(!empty($user)): ?>
-			<h6>Welcome <?= $user['first_name']; ?>  You are logged in!</h6>
+			<h6>Welcome <?= ucfirst($user['first_name']); ?>  You are logged in!</h6>
 			<a href="script/logout.php">Logout</a>
 			
 		<!-- Else the login will be shown -->
@@ -24,7 +24,7 @@ include 'script/check-login.php';
 				<h1>Login</h1>
 				<?php if(isset($msg)) echo $msg; ?>
 				<form action="index.php" onsubmit="validate_login()" method="POST">
-					<input type="text" placeholder="Enter Your Username" name="username_email">
+					<input type="text" placeholder="Enter Your Username or Email" name="username_email">
 					<input type="password" placeholder="Enter Your Password" name="password">
 					<input type="submit">
 				</form>

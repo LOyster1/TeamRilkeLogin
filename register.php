@@ -5,6 +5,8 @@ if(isset($_SESSION['user_id']))
 {
 	header("Location: index.php");
 }
+require 'script/send-register.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +29,11 @@ if(isset($_SESSION['user_id']))
 					<?php if(!empty($message)): ?>
 						<h6><?= $message ?></h6>
 					<?php endif; ?>
-					<form action="script/send-register.php" method="POST">
+					<form action="#" method="POST">
 						<input type="text" name="first_name" placeholder="First Name">
 						<input type="text" name="last_name" placeholder="Last Name">
-						<input type="email" name="email" placeholder="Email">
-						<input type="text" name="username" placeholder="Username">
+						<input type="email" name="email" placeholder="Email"><?php if(!empty($email_msg)): ?><h6><?= $email_msg ?></h6><?php endif; ?>
+						<input type="text" name="username" placeholder="Username"><?php if(!empty($username_msg)): ?><h6><?= $username_msg ?></h6><?php endif; ?>
 						<input type="password" name="password" placeholder="Password">
 						<input type="password" name="confirm_password" placeholder="Confirm Password">
 						<input type="submit">
