@@ -1,24 +1,21 @@
 <?php 
 session_start(); 
-include '../script/user.php';
-require '../script/check-login.php';
+include './../script/user.php';
+require './../script/check-login.php';
 ?>
 
 
 <!DOCTYPE html>
 <html>
-<?php include('../include/head.php'); ?>
+<?php include('include/head.php'); ?>
 
 
 <body>
 	<div class="container">
-		<!--<div id="holder">-->
-			<?php include('../include/header.php'); ?>
-			<?php include('../include/nav-bar.php'); ?>
-			<!--<div id="content">-->
-				<?php echo $_SESSION["username"];?>
+			<?php include('include/header.php'); ?>
+			<?php include('include/nav-bar.php'); ?>
 				<ul>
-					<li><a href="#">Add Field Trip</a></li>
+					<li><a href="./teacher-view-form.php">Add Field Trip</a></li>
 					<li><a href="#">Edit Field Trip</a></li>
 				</ul>
 				

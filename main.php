@@ -12,19 +12,14 @@ require 'script/check-login.php';
 
 <body>
 	<div class="container">
-		<!--<div id="holder">-->
 			<?php include('include/header.php'); ?>
 			<?php include('include/nav-bar.php'); ?>
-			<!--<div id="content">-->
-				<?php echo $_SESSION["username"];?>
 				<ul>
 					<li><a href="#">After School Program Sign Up</a></li>
-					<li><a href="./permissionImpossible/slip-management.php">Field Trip Permission Slip</a></li>
+					<li><a href="./PermissionImpossible/slip-management.php">Field Trip Permission Slip</a></li>
 				</ul>
 				
-			<!--</div>-->
 			<div id="footer"></div>
-		<!--</div>-->
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

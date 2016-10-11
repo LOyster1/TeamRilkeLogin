@@ -13,7 +13,8 @@ require 'script/send-register.php';
 <html>
 <?php include('include/head.php'); ?>
 	<body>
-		<div id="holder">
+		<div class="container">
+			//
 			<?php include ('include/header.php'); ?>
 			<?php include('include/nav-bar.php'); ?>
 			<div id="content">
@@ -30,13 +31,32 @@ require 'script/send-register.php';
 						<h6><?= $message ?></h6>
 					<?php endif; ?>
 					<form action="#" method="POST">
-						<input type="text" name="first_name" placeholder="First Name">
-						<input type="text" name="last_name" placeholder="Last Name">
-						<input type="email" name="email" placeholder="Email"><?php if(!empty($email_msg)): ?><h6><?= $email_msg ?></h6><?php endif; ?>
-						<input type="text" name="username" placeholder="Username"><?php if(!empty($username_msg)): ?><h6><?= $username_msg ?></h6><?php endif; ?>
-						<input type="password" name="password" placeholder="Password">
-						<input type="password" name="confirm_password" placeholder="Confirm Password">
-						<input type="submit">
+						<table>
+							<tr>
+								<td><h6>First Name:</h6></td><td><input type="text" name="first_name" placeholder="First Name"></td>
+							</tr>
+							<tr>
+								<td><h6>Last Name:</h6></td><td><input type="text" name="last_name" placeholder="Last Name"></td>
+							</tr>
+							<tr>
+								<td><h6>Email:</h6></td><td><input type="email" name="email" placeholder="Email">
+								<?php if(!empty($email_msg)): ?><h6><?= $email_msg ?></h6><?php endif; ?></td>
+							</tr>
+							<tr>
+								<td><h6>Username:</h6></td><td><input type="text" name="username" placeholder="Username">
+								<?php if(!empty($username_msg)): ?><h6><?= $username_msg ?></h6><?php endif; ?>
+								</td>
+							</tr>
+							<tr>
+								<td><h6>Password:</h6></td><td><input type="password" name="password" placeholder="Password"></td>
+							</tr>
+							<tr>
+								<td><h6>Password:</h6></td><td><input type="password" name="confirm_password" placeholder="Confirm Password"></td>
+							</tr>
+							<tr>
+								<td></td> <td><input type="submit"></td>
+							</tr>
+						</table>
 					</form>
 				</div>
 			</div>
