@@ -1,25 +1,25 @@
 <?php 
 session_start(); 
-include 'script/user.php';
-require 'script/check-login.php';
+include '../script/user.php';
+require '../script/check-login.php';
 ?>
 
 
 <!DOCTYPE html>
 <html>
-<?php include('include/head.php'); ?>
+<?php include('../include/head.php'); ?>
 
 
 <body>
 	<div class="container">
 		<!--<div id="holder">-->
-			<?php include('include/header.php'); ?>
-			<?php include('include/nav-bar.php'); ?>
+			<?php include('../include/header.php'); ?>
+			<?php include('../include/nav-bar.php'); ?>
 			<!--<div id="content">-->
 				<?php echo $_SESSION["username"];?>
 				<ul>
-					<li><a href="#">After School Program Sign Up</a></li>
-					<li><a href="./permissionImpossible/slip-management.php">Field Trip Permission Slip</a></li>
+					<li><a href="#">Add Field Trip</a></li>
+					<li><a href="#">Edit Field Trip</a></li>
 				</ul>
 				
 			<!--</div>-->

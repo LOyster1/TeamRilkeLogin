@@ -9,14 +9,12 @@ require 'database.php';
 		$records->execute(array(':username'=>$_POST['username_email'], ':email'=>$_POST['username_email']));
 		$results = $records->fetch(PDO::FETCH_ASSOC);
 		
-		print_r($results);
-		echo "hi";
 		// Checks to see if the password matches
 		if(password_verify($_POST['password'], $results['password']))
 		{
 			// Sets the session's 'user_id' to the user's 'id'
 			$_SESSION['user_id'] = $results['id'];
-			header("Location: index.php");
+			header("Location: main.php");
 		} 
 		else
 		{
