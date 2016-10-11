@@ -3,12 +3,13 @@
 	height:40px;
 	background-color:rgb(13, 13, 13);
 }
-ul {
+.nav ul {
 	display:inline;
 	margin:0;
 	padding:0;
 }
-ul li {
+.nav ul li 
+{
 	display:inline-block;
 	position:relative;
 	list-style-type:none;
@@ -26,28 +27,28 @@ ul li {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
-ul li a {
+.nav  ul li a {
 	text-decoration:none;
 	color:#fff;
 	
 }
-ul li:hover {
+.nav ul li:hover {
 	display:block;
 	background-color:rgb(180, 180, 180);
 }
-ul li:hover ul {
+.nav ul li:hover ul {
 	display:block;
 	visibility:visible;
 }
-ul li ul li {
+.nav  ul li ul li {
 	background-color:rgb(180, 180, 180);
 }
-ul li ul {
+.nav  ul li ul {
 	position:absolute;
 	top:40px;
 	display:none;
 }
-ul li ul li:hover {
+.nav  ul li ul li:hover {
 	background-color:rgb(200, 200, 200);
 	
 }
